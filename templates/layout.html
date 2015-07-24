@@ -1,0 +1,28 @@
+{{ define "layout" }}<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Movie Database</title>
+  <link href='http://fonts.googleapis.com/css?family=Fresca' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/public/css/reset.css">
+  <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title"><h1>Our Favorite Movies</h1></div><br>
+      <nav>
+        <button id="add-button" class="button"><a href="/put">Add</a></button>
+        <button id="search-button" class="button"><a href="/search">Search</a></button>
+      </nav>
+    </header>
+    <main>
+      {{ template "AddMovie" . }}
+      {{ template "SearchInput" . }}
+      {{ template "SearchResults" . }}
+    </main>
+  </div>
+  <script src="/public/js/main.js"></script>
+</body>
+</html>
+{{ end }}

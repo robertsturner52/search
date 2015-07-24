@@ -1,0 +1,12 @@
+{{ define "AddMovie" }}
+<div id="add-container" class="form-container">
+  <h2>Add a favorite movie to the database.</h2>
+  <form method="POST" id="new-movie-form" action="/put">
+    <input name="input-title" type="text" placeholder="movie title"></input><br>
+    <textarea name="input-description" placeholder="description of movie"></textarea><br>
+    <input name="input-username" type="text" placeholder="add your username">
+    <input id="add-submit" class="button" type="submit">
+    <a href="/" class="button" id="cancel-button">Cancel</a>
+  </form>
+</div>
+{{ end }}

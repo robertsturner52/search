@@ -1,0 +1,24 @@
+{{ define "SearchInput" }}
+<div id="search-container" class="form-container">
+  <h2>Search for a movie.</h2>
+  <form class="search-form" id="title-form" action="/search">
+    <label>Search for a movie by title</label>
+    <input type="hidden" name="mode" value="title">
+    <input name="q" type="text" placeholder="add word(s) from title"></input><br>
+    <input id="title-submit" class="button" type="submit">
+  </form>
+  <form class="search-form" id="title-form" action="/search">
+    <label>Search for a movie by description</label>
+    <input type="hidden" name="mode" value="description">
+    <input name="q" type="text" placeholder="add word(s) from the description"></input><br>
+    <input id="description-submit" class="button" type="submit">
+  </form>
+  <form class="search-form" id="title-form" action="/search">
+    <label>Search for a movie by username</label>
+    <input type="hidden" name="mode" value="username">
+    <input name="q" type="text" placeholder="add username of description author"></input><br>
+    <input id="username-submit" class="button" type="submit">
+  </form>
+  <a href="/" class="button" id="cancel-button">Cancel</a>
+</div>
+{{ end }}
